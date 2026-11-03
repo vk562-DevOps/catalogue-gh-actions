@@ -7,4 +7,4 @@ jobs:
       project: roboshop
       environment: dev
       component: catalogue
-    secrets: inherit # inherit secrets to use in reusable workflow
+    secrets: inherit
