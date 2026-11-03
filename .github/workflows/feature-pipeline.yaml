@@ -1,6 +1,8 @@
 name: feature-pipeline
 on:
-  workflow_dispatch: # added manual trigger
+  [push]
+  # workflow_dispatch: # added manual trigger
+  #   inputs: {}
 jobs:
   feature-pipeline:
     uses: vk562-DevOps/github-workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
