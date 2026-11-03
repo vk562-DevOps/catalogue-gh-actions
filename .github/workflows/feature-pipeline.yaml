@@ -1,0 +1,12 @@
+name: feature-pipeline
+on: [push]
+jobs:
+  feature-pipeline:
+    runs-on: self-hosted
+    steps:
+      - name: reusable workflow
+        uses: vk562-DevOps/github-workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
+        with:
+          project: roboshop
+          environment: dev
+          component: catalogue
