@@ -21,7 +21,7 @@ concurrency:
 permissions:
   contents: read
   statuses: write
-  security-events: read
+  security-events: write
 jobs:
   non-prod-pipeline:
     if: github.ref == 'refs/heads/main'
