@@ -1,4 +1,4 @@
-name: NON-PROD Pipeline
+name: PROD Pipeline
 on:
   workflow_dispatch:
     inputs:
