@@ -1,0 +1,27 @@
+name: feature-pipeline
+on:
+  [push] ##
+  # workflow_dispatch: # added manual trigger
+  #   inputs: {}
+permissions:
+  contents: read
+  statuses: write
+  security-events: read
+jobs:
+  feature-pipeline:
+    if: github.ref != 'refs/heads/main'
+    uses: vk562-DevOps/github-workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
+    with:
+      project: roboshop
+      environment: dev
+      component: catalogue
+    secrets: inherit
+
+  dev-pipeline:
+    if: github.ref == 'refs/heads/main'
+    uses: vk562-DevOps/github-workflows/.github/workflows/dev-nodejs-pipeline.yaml@main
+    with:
+      project: roboshop
+      environment: dev
+      component: catalogue
+    secrets: inherit
