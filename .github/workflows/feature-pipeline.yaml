@@ -3,6 +3,10 @@ on:
   [push]
   # workflow_dispatch: # added manual trigger
   #   inputs: {}
+permissions:
+  contents: read
+  statuses: write
+  security-events: read
 jobs:
   feature-pipeline:
     uses: vk562-DevOps/github-workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
