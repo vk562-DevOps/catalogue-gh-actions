@@ -1,6 +1,6 @@
 name: feature-pipeline
 on:
-  [push] ##
+  [push]
   # workflow_dispatch: # added manual trigger
   #   inputs: {}
 permissions:
